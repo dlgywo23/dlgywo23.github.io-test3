@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Technology Education Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Technology Education Portal</h1>
+            <p>개념부터 실무, 그리고 미래 기술까지 한눈에 탐구하는 인터랙티브 학습 공간</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Search & Filter -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="관심 있는 기술 키워드나 기업을 검색해보세요...">
+        </div>
+
+        <!-- 5 Major Tech Fields -->
+        <div id="techGrid" class="tech-grid">
+            <!-- Cards will be injected by JavaScript -->
+        </div>
+
+        <!-- Sustainability & ESG Section -->
+        <section class="info-section">
+            <h2><i class="fas fa-leaf" style="color: #27ae60;"></i> Sustainability & ESG</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">기술의 발전이 환경에 미치는 긍정적 영향과 탄소 중립을 위한 노력</p>
+            <div class="data-viz-container">
+                <div class="stat-card">
+                    <span class="stat-value">0%</span>
+                    <p>수소차 배기가스 배출률</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">30%</span>
+                    <p>친환경 선박 연비 향상</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">100+</span>
+                    <p>ESG 경영 도입 기업 수</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Path Section -->
+        <section class="info-section" style="background: #fdfdfd;">
+            <h2><i class="fas fa-road" style="color: #2c3e50;"></i> Career Path</h2>
+            <p style="text-align: center;">기술 분야 전문가로 성장하기 위한 로드맵</p>
+            <div class="career-path">
+                <div class="career-line"></div>
+                <div class="career-step"><i class="fas fa-school"></i><br>공업계 고교 / 대학</div>
+                <div class="career-step"><i class="fas fa-chalkboard-user"></i><br>기술교사</div>
+                <div class="career-step"><i class="fas fa-flask"></i><br>공학 연구원</div>
+                <div class="career-step"><i class="fas fa-user-tie"></i><br>기업 CEO / 임원</div>
+                <div class="career-step"><i class="fas fa-rocket"></i><br>미래 기술 창업가</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 id="modalTitle" style="margin-top: 0;">관련 기업 정보</h2>
+            <div id="companyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
